@@ -1,3 +1,4 @@
+
 @extends('layouts.default')
 
 @section('head')
@@ -15,7 +16,7 @@
 
 <p>{{ __('introduction_texts.type_list', ['brand'=>$brand->name, 'type'=>$type->name]) }}</p>
 
-
+<div class="grid-container">
 	@foreach ($manuals as $manual)
 	
 		@if ($manual->locally_available)
@@ -27,5 +28,5 @@
 		
 		<br />
 	@endforeach
- 
+	</div>
 @stop

@@ -1,9 +1,9 @@
 @extends('layouts.default')
 
 @section('introduction_text')
-    <p>{{ __('introduction_texts.homepage_line_1') }}</p>
-    <p>{{ __('introduction_texts.homepage_line_2') }}</p>
-    <p>{{ __('introduction_texts.homepage_line_3') }}</p>
+    <h5><b>{{ __('introduction_texts.homepage_line_1') }}</b></h5>
+    <h5><b>{{ __('introduction_texts.homepage_line_2') }}</b></h5>
+    <h5><b>{{ __('introduction_texts.homepage_line_3') }}</b></h5>
 @endsection
 
 @section('content')
@@ -41,13 +41,13 @@
                             }
                             $header_first_letter = $current_first_letter
                             ?>
-
+                        
                             <li>
                                 <a href="/{{ $brand->id }}/{{ $brand->name_url_encoded }}/">{{ $brand->name }}</a>
                             </li>
                         @endforeach
                     </ul>
-
+                    
                 </div>
                 <?php
                 unset($header_first_letter);

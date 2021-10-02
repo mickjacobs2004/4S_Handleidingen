@@ -41,10 +41,8 @@
         </div>
 
     </div>
-    <div class="bigfooter">
-        @include('includes.footer')
-    </div>
 </div>
+@include('includes.footer')
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

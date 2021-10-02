@@ -1,3 +1,4 @@
+
 @extends('layouts.default')
 
 @section('head')
@@ -12,18 +13,19 @@
 
 @section('content')
 
-<h1>{{ $brand->name }} - {{ $type->name }}</h1>
+<div class="grid-container">
+	<h1>{{ $brand->name }} - {{ $type->name }}</h1>
 
-@if ($manual->locally_available)
-	<iframe src="{{ $manual->url }}" width="780" height="600" frameborder="0" marginheight="0" marginwidth="0">
-	Iframes are not supported<br />
-	<a href="{{ $manual->url }}" target="new" alt="Download your manual here" title="Download your manual here">Click here to download the manual</a>
-	</iframe>
-@else
-	<a href="{{ $manual->url }}" target="new" alt="Download your manual here" title="Download your manual here">Click here to download the manual</a>
-@endif
+	@if ($manual->locally_available)
+		<iframe src="{{ $manual->url }}" width="780" height="600" frameborder="0" marginheight="0" marginwidth="0">
+		Iframes are not supported<br />
+		<a href="{{ $manual->url }}" target="new" alt="Download your manual here" title="Download your manual here">Click here to download the manual</a>
+		</iframe>
+	@else
+		<a href="{{ $manual->url }}" target="new" alt="Download your manual here" title="Download your manual here">Click here to download the manual</a>
+	@endif
 
-
+</div>
 
 
 @stop
